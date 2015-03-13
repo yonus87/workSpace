@@ -7,9 +7,9 @@ function calculateAge( birthYear, currentYear )
 
 }
 
-calculateAge(1987,2015);
-calculateAge(1991,2015);
-calculateAge(1981,2015);
+//calculateAge(1987,2015);
+//calculateAge(1991,2015);
+//calculateAge(1981,2015);
 
 // Task 1 BONUS
 // Fetching the current year from date object and calculating the age.
@@ -21,7 +21,7 @@ function calculateAgeusingBirthYear( birthYear )
   alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
 }
 
-calculateAgeusingBirthYear(1987);
+//calculateAgeusingBirthYear(1987);
 
 // Task 2 - The Lifetime Supply Calculator
  MAX_AGE = 80;
@@ -32,9 +32,9 @@ calculateAgeusingBirthYear(1987);
  
  }
  
- calculateSupply(27,30);
- calculateSupply(25,40);
- calculateSupply(33,16);
+ //calculateSupply(27,30);
+ //calculateSupply(25,40);
+ //calculateSupply(33,16);
  
  //Task 2 BONUS
  function calculateSupplywithFloat ( age, amountFloat )
@@ -44,7 +44,7 @@ calculateAgeusingBirthYear(1987);
  
  }
  
- calculateSupplywithFloat(27,28.445);
+ //calculateSupplywithFloat(27,28.445);
  
  // Task 3 - The Geometrizer
  function calcCircumfrence( radius )
