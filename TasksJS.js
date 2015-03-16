@@ -3,8 +3,8 @@
 function calculateAge( birthYear, currentYear )
 {
   currentAge = currentYear - birthYear;
-  alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
-
+  //alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
+  return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
 }
 
 //calculateAge(1987,2015);
@@ -18,7 +18,8 @@ function calculateAgeusingBirthYear( birthYear )
   todayDate = new Date();
   currentYear = todayDate.getFullYear();
   currentAge = currentYear - birthYear;
-  alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
+  //alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
+  return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
 }
 
 //calculateAgeusingBirthYear(1987);
@@ -28,8 +29,8 @@ function calculateAgeusingBirthYear( birthYear )
  function calculateSupply ( age, amount )
  {
    totalAmount = (MAX_AGE - age) * amount * 365;
-   alert("You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".");
- 
+   //alert("You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".");
+   return "You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".";
  }
  
  //calculateSupply(27,30);
@@ -40,8 +41,8 @@ function calculateAgeusingBirthYear( birthYear )
  function calculateSupplywithFloat ( age, amountFloat )
  {
    totalAmount = Math.round((MAX_AGE - age) * amountFloat * 365.0);
-   alert("You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".");
- 
+   //alert("You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".");
+   return "You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".";
  }
  
  //calculateSupplywithFloat(27,28.445);
@@ -50,15 +51,15 @@ function calculateAgeusingBirthYear( birthYear )
  function calcCircumfrence( radius )
  {
     circumfrence = 2* Math.PI * radius;
-	alert("The circumference is "+ Math.round(circumfrence) + "."); 
- 
+	//alert("The circumference is "+ Math.round(circumfrence) + "."); 
+    return "The circumference is "+ Math.round(circumfrence) + ".";
  }
  
  function calcArea( radius )
  {
     area = Math.PI * Math.pow(radius,2);
-	alert("The area is "+ Math.round(area) + "."); 
- 
+	//alert("The area is "+ Math.round(area) + "."); 
+    return "The area is "+ Math.round(area) + ".";
  }
  
  // Task 4 - The Temperature Convertor
@@ -66,16 +67,16 @@ function calculateAgeusingBirthYear( birthYear )
  {
     tempCelsius = 35;
     tempFahrenheit = ((9 * tempCelsius)/5) + 32;
-	alert(tempCelsius+"°C is "+ Math.floor(tempFahrenheit) +"°F.");
- 
+	//alert(tempCelsius+"°C is "+ Math.floor(tempFahrenheit) +"°F.");
+    return tempCelsius+"°C is "+ Math.floor(tempFahrenheit) +"°F.";
  }
  
  function fahrenheitToCelsius()
  {
     tempFahrenheit = 156;
     tempCelsius = ((tempFahrenheit - 32) * 5)/9;
-	alert(tempFahrenheit+"°F is "+ Math.floor(tempCelsius) +"°C.");
- 
+	//alert(tempFahrenheit+"°F is "+ Math.floor(tempCelsius) +"°C.");
+    return tempCelsius+"°C is "+ Math.floor(tempFahrenheit) +"°F.";
  }
  
  
