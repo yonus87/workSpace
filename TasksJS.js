@@ -3,8 +3,8 @@
 function calculateAge( birthYear, currentYear )
 {
   currentAge = currentYear - birthYear;
-  //alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
-  return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
+  alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
+  //return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
 }
 
 //calculateAge(1987,2015);
@@ -67,16 +67,16 @@ function calculateAgeusingBirthYear( birthYear )
  {
     tempCelsius = 35;
     tempFahrenheit = ((9 * tempCelsius)/5) + 32;
-	//alert(tempCelsius+"캜 is "+ Math.floor(tempFahrenheit) +"캟.");
-    return tempCelsius+"캜 is "+ Math.floor(tempFahrenheit) +"캟.";
+	//alert(tempCelsius+"째C is "+ Math.floor(tempFahrenheit) +"째F.");
+    return tempCelsius+"째C is "+ Math.floor(tempFahrenheit) +"째F.";
  }
  
  function fahrenheitToCelsius()
  {
     tempFahrenheit = 156;
     tempCelsius = ((tempFahrenheit - 32) * 5)/9;
-	//alert(tempFahrenheit+"캟 is "+ Math.floor(tempCelsius) +"캜.");
-    return tempCelsius+"캜 is "+ Math.floor(tempFahrenheit) +"캟.";
+	//alert(tempFahrenheit+"째F is "+ Math.floor(tempCelsius) +"째C.");
+    return tempCelsius+"째C is "+ Math.floor(tempFahrenheit) +"째F.";
  }
  
  
