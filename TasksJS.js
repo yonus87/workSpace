@@ -1,4 +1,4 @@
-//Task 1 - The Age Calcculator 
+//Task 1 - The Age Calculator 
 //Calculating age based on the difference between the birth year and current year
 function calculateAge( birthYear, currentYear )
 {

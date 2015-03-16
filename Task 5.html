@@ -1,0 +1,68 @@
+<html>
+<head>
+<style type="text/css"></style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/yonus87/workSpace/master/taskStyles.css">
+<script type="text/javascript" src="https://rawgit.com/yonus87/workSpace/master/TasksJS.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $("button").click(function(){
+        var btn_id = $(this).attr("id");
+		switch(btn_id){
+		  case "btn_1":
+		               var msg ="<b>AGE CALCULATOR</b>"; 
+					   msg+= "<br/>"+ calculateAge(1987,2015);
+		               msg+= "<br/>"+ calculateAge(1991,2015);
+		               msg+= "<br/>"+ calculateAge(1981,2015);
+					   msg+= "<br/><br/> <b>BONUS</b>";
+					   msg+= "<br/>"+ calculateAgeusingBirthYear(1987);
+					   $("#resultSummary").html(msg);
+					   break;
+		  case "btn_2":
+		               var msg = "<b>LIFETIME SUPPLY CALCULATOR</b>";
+					   msg+= "<br/>"+ calculateSupply(27,30);
+		               msg+= "<br/>"+ calculateSupply(25,40);
+		               msg+= "<br/>"+ calculateSupply(33,16);
+					   msg+= "<br/><br/> <b>BONUS</b>";
+					   msg+= "<br/>"+ calculateSupplywithFloat(27,28.445);
+					   $("#resultSummary").html(msg);
+		               break;
+		  case "btn_3":
+		               var msg = "<b>GEOMETRIZER</b>";
+					   msg+= "<br/>"+ calcCircumfrence(3.85);
+					   msg+= "<br/>"+ calcArea(3.85);
+					   $("#resultSummary").html(msg);
+		               break;
+		  case "btn_4":
+		               var msg = "TEMPERATURE CONVERTOR";
+					   msg+= "<br/>"+ celsiusToFahrenheit();
+					   msg+= "<br/>"+ fahrenheitToCelsius();
+					   $("#resultSummary").html(msg);
+		               break;
+		  default:
+		           var msg = "<i>Please click on any button</i>";
+		           $("#resultSummary").html(msg);
+				   break;
+		
+		}
+    });
+});
+</script>
+</head>
+<body>
+  <div class ="banner" style ="padding-left:55px;padding-top:10px;height:10%;">
+     <center>
+       <button id="btn_1" class="myButton">Task 1</button> 
+	   <button id="btn_2" class="myButton-2">Task 2</button>
+       <button id="btn_3" class="myButton-3">Task 3</button>
+       <button id="btn_4" class="myButton-4">Task 4</button>
+	 </center>
+  </div>
+  <div class="panel" id ="consoleWindow" style="height:88%">
+   <p id="resultSummary" style="padding-left:10px;color:#E2DEDE;"><i>Please click on any button</i> </p>
+  </div>
+  
+</body>
+</html>
