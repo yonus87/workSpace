@@ -3,8 +3,8 @@
 function calculateAge( birthYear, currentYear )
 {
   currentAge = currentYear - birthYear;
-  alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
-  //return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
+  //alert("You are either "+ currentAge + " years or " + (currentAge-1) +" years old.");
+  return "You are either "+ currentAge + " years or " + (currentAge-1) +" years old.";
 }
 
 //calculateAge(1987,2015);
