@@ -2,12 +2,16 @@
 <head>
 <style type="text/css"></style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/yonus87/workSpace/master/taskStyles.css">
 <script type="text/javascript" src="https://rawgit.com/yonus87/workSpace/master/TasksJS.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
+    $( "#panelWindow" ).accordion();	
+	
    $("button").click(function(){
         var btn_id = $(this).attr("id");
 		switch(btn_id){
@@ -36,16 +40,10 @@ $(document).ready(function(){
 					   $("#resultSummary").html(msg);
 		               break;
 		  case "btn_4":
-		               var msg = "TEMPERATURE CONVERTOR";
-					   msg+= "<br/>"+ celsiusToFahrenheit();
-					   msg+= "<br/>"+ fahrenheitToCelsius();
-					   $("#resultSummary").html(msg);
-		               break;
-		  default:
-		           var msg = "<i>Please click on any button</i>";
-		           $("#resultSummary").html(msg);
-				   break;
-		
+		               $("#result_celFar").html(celsiusToFahrenheit($("#txt_tempCelsius").val()));
+					   $("#result_farCel").html(fahrenheitToCelsius($("#txt_tempFarenheit").val()));
+					   break;
+		  		
 		}
     });
 });
@@ -53,15 +51,84 @@ $(document).ready(function(){
 </head>
 <body>
   <div class ="banner" style ="padding-left:55px;padding-top:10px;height:10%;">
-     <center>
-       <button id="btn_1" class="myButton">Task 1</button> 
-	   <button id="btn_2" class="myButton-2">Task 2</button>
-       <button id="btn_3" class="myButton-3">Task 3</button>
-       <button id="btn_4" class="myButton-4">Task 4</button>
-	 </center>
   </div>
-  <div class="panel" id ="consoleWindow" style="height:88%">
-   <p id="resultSummary" style="padding-left:10px;color:#E2DEDE;"><i>Please click on any button</i> </p>
+
+  <div class="panel" id ="panelWindow" style="height:88%">
+    <h3>Task 1</h3>
+	<div>
+	<table>
+	<tr>
+	    <td><p>Enter the birth year: <input id="txt_birthYear" type="text" /></p>
+            <p>Enter the current year: <input id="txt_currentYear" type="text" /></p>
+		</td>
+		<td><p><b>Bonus</b></p>
+            <p>Enter the birth year: <input id="txt_birthYear_Bonus" type="text" /></p>
+		</td>
+	</tr>
+	<tr>
+	    <td colspan="2"><button id="btn_1" class="myButton">Calculate Age</button> </td>
+	</tr>
+	<tr>
+	    <td><p id ="result_age"></p></td><td><p id="result_age_Bonus"></p></td>
+	</tr>
+	</table>	
+	</div>
+	<h3>Task 2</h3>
+	<div>
+	<table>
+	<tr>
+	    <td><p>Enter the birth year: <input id="txt_birthYear" type="text" /></p>
+            <p>Enter the current year: <input id="txt_currentYear" type="text" /></p>
+		</td>
+		<td><p><b>Bonus</b></p>
+            <p>Enter the birth year: <input id="txt_birthYear_Bonus" type="text" /></p>
+		</td>
+	</tr>
+	<tr>
+	    <td colspan="2"><button id="btn_2" class="myButton-2">Calculate Supplies</button></td>
+	</tr>
+	<tr>
+	    <td><p id ="result_supplies"></p></td><td><p id="result_supplies_Bonus"></p></td>
+	</tr>
+	</table>		
+	</div>
+	<h3>Task 3</h3>
+	<div>
+	<table>
+	<tr>
+	    <td><p>Enter the birth year: <input id="txt_birthYear" type="text" /></p>
+            <p>Enter the current year: <input id="txt_currentYear" type="text" /></p>
+		</td>
+		<td><p><b>Bonus</b></p>
+            <p>Enter the birth year: <input id="txt_birthYear_Bonus" type="text" /></p>
+		</td>
+	</tr>
+	<tr>
+	    <td colspan="2"><button id="btn_3" class="myButton-3">Calculate Geometrics</button></td>
+	</tr>
+	<tr>
+	    <td><p id ="result_geometrics_circum"></p></td><td><p id="result_geometrics_area"></p></td>
+	</tr>
+	</table>		
+	</div>
+	<h3>Task 4</h3>
+	<div>
+	<table>
+	<tr>
+	    <td><p>Enter temperature in °C: <input id="txt_tempCelsius" type="text" /></p>         
+		</td>
+		<td><p>Enter temperature in °F: <input id="txt_tempFarenheit" type="text" /></p>
+		</td>
+	</tr>
+	<tr>
+	    <td colspan="2"><button id="btn_4" class="myButton-4">Convert temp.</button></hr></td>
+	</tr>
+	<tr>
+	    <td><p id ="result_celFar"></p></td><td><p id="result_farCel"></p></td>
+	</tr>
+	</table>		
+	
+	</div>
   </div>
   
 </body>
