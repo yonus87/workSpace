@@ -3,10 +3,10 @@
 function calculateAge( birthYear, currentYear )
 {
   if(birthYear == ""){
-   return "Please enter a valid birthYear.";
+   return "<font color='red'><i>Please enter a valid birthYear.</i></font>";
   }
   else if(currentYear == ""){
-    return "Please enter a valid current Year.";
+    return "<font color='red'><i>Please enter a valid current Year.</i></font>";
   }
   else{
   var currentAge = currentYear - birthYear;
@@ -24,7 +24,7 @@ function calculateAge( birthYear, currentYear )
 function calculateAgeusingBirthYear( birthYear )
 {
   if(birthYear == ""){
-   return "Please enter a valid birthYear.";
+   return "<font color='red'><i>Please enter a valid birthYear.</i></font>";
   }
   else{
   
@@ -43,13 +43,13 @@ function calculateAgeusingBirthYear( birthYear )
  function calculateSupply ( age, amount )
  {
    if(age == ""){
-    return "Please enter a valid age.";
+    return "<font color='red'><i>Please enter a valid age.</i></font>";
    }
    else if(amount == ""){
-    return "Please enter a valid amount.";
+    return "<font color='red'><i>Please enter a valid amount.</i></font>";
    }
    if(age >= MAX_AGE){
-     return "Please enter an age less than the maximum age("+MAX_AGE+")";
+     return "<font color='red'><i>Please enter an age less than the maximum age("+MAX_AGE+").</i></font>";
    }
    else{   
    var totalAmount = (MAX_AGE - age) * amount * 365;
@@ -66,13 +66,13 @@ function calculateAgeusingBirthYear( birthYear )
  function calculateSupplywithFloat ( age, amountFloat )
  {
    if(age == ""){
-    return "Please enter a valid age.";
+    return "<font color='red'><i>Please enter a valid age.</i></font>";
    }
    else if(amount == ""){
-    return "Please enter a valid amount.";
+    return "<font color='red'><i>Please enter a valid amount.</i></font>";
    }
    if(age >= MAX_AGE){
-     return "Please enter an age less than the maximum age("+MAX_AGE+")";
+     return "<font color='red'><i>Please enter an age less than the maximum age("+MAX_AGE+").</i></font>";
    }
    else{   
    var totalAmount = Math.round((MAX_AGE - age) * amountFloat * 365.0);
@@ -87,7 +87,7 @@ function calculateAgeusingBirthYear( birthYear )
  function calcCircumfrence( radius )
  {
     if(radius ==""){
-	 return "Please enter a valid radius.";
+	 return "<font color='red'><i>Please enter a valid radius.</i></font>";
 	}
 	else{
 	var circumfrence = 2* Math.PI * radius;
@@ -99,7 +99,7 @@ function calculateAgeusingBirthYear( birthYear )
  function calcArea( radius )
  {
     if(radius ==""){
-	 return "Please enter a valid radius.";
+	 return "<font color='red'><i>Please enter a valid radius.</i></font>";
 	}
 	else{
     var area = Math.PI * Math.pow(radius,2);
@@ -112,7 +112,7 @@ function calculateAgeusingBirthYear( birthYear )
  function celsiusToFahrenheit(tempCelsius)
  {
     if(tempCelsius ==""){
-	 return "Please enter a valid temperature for conversion.";
+	 return "<font color='red'><i>Please enter a valid temperature for conversion.</i></font>";
 	}
 	else{
     var tempFahrenheit = ((9 * tempCelsius)/5) + 32;
@@ -124,7 +124,7 @@ function calculateAgeusingBirthYear( birthYear )
  function fahrenheitToCelsius(tempFahrenheit)
  {
     if(tempFahrenheit ==""){
-	 return "Please enter a valid temperature for conversion.";
+	 return "<font color='red'><i>Please enter a valid temperature for conversion.</i></font>";
 	}
 	else{
     var tempCelsius = ((tempFahrenheit - 32) * 5)/9;
