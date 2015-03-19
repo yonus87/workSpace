@@ -16,29 +16,17 @@ $(document).ready(function(){
         var btn_id = $(this).attr("id");
 		switch(btn_id){
 		  case "btn_1":
-		               var msg ="<b>AGE CALCULATOR</b>"; 
-					   msg+= "<br/>"+ calculateAge(1987,2015);
-		               msg+= "<br/>"+ calculateAge(1991,2015);
-		               msg+= "<br/>"+ calculateAge(1981,2015);
-					   msg+= "<br/><br/> <b>BONUS</b>";
-					   msg+= "<br/>"+ calculateAgeusingBirthYear(1987);
-					   $("#resultSummary").html(msg);
+		               $("#result_age").html(calculateAge($("#txt_birthYear").val(),$("#txt_currentYear").val()));
+					   $("#result_age_Bonus").html(calculateAgeusingBirthYear($("#txt_birthYear_Bonus").val()));
 					   break;
 		  case "btn_2":
-		               var msg = "<b>LIFETIME SUPPLY CALCULATOR</b>";
-					   msg+= "<br/>"+ calculateSupply(27,30);
-		               msg+= "<br/>"+ calculateSupply(25,40);
-		               msg+= "<br/>"+ calculateSupply(33,16);
-					   msg+= "<br/><br/> <b>BONUS</b>";
-					   msg+= "<br/>"+ calculateSupplywithFloat(27,28.445);
-					   $("#resultSummary").html(msg);
+		               $("#result_supplies").html(calculateSupply($("#txt_currentAge").val(),$("#txt_amount").val()));
+					   $("#result_supplies_Bonus").html(calculateSupplywithFloat($("#txt_currentAge_Bonus").val(),$("#txt_amount_Bonus").val()));
 		               break;
 		  case "btn_3":
-		               var msg = "<b>GEOMETRIZER</b>";
-					   msg+= "<br/>"+ calcCircumfrence(3.85);
-					   msg+= "<br/>"+ calcArea(3.85);
-					   $("#resultSummary").html(msg);
-		               break;
+		               $("#result_geometrics_circum").html(calcCircumfrence($("#txt_radius").val()));
+					   $("#result_geometrics_area").html(calcArea($("#txt_radius").val()));
+					   break;
 		  case "btn_4":
 		               $("#result_celFar").html(celsiusToFahrenheit($("#txt_tempCelsius").val()));
 					   $("#result_farCel").html(fahrenheitToCelsius($("#txt_tempFarenheit").val()));
@@ -77,11 +65,12 @@ $(document).ready(function(){
 	<div>
 	<table>
 	<tr>
-	    <td><p>Enter the birth year: <input id="txt_birthYear" type="text" /></p>
-            <p>Enter the current year: <input id="txt_currentYear" type="text" /></p>
+	    <td><p>Enter the current age: <input id="txt_currentAge" type="text" /></p>
+            <p>Enter the amount consumed per day: <input id="txt_amount" type="text" /></p>
 		</td>
 		<td><p><b>Bonus</b></p>
-            <p>Enter the birth year: <input id="txt_birthYear_Bonus" type="text" /></p>
+            <p>Enter the current age: <input id="txt_currentAge_Bonus" type="text" /></p>
+            <p>Enter the amount consumed per day(#.##): <input id="txt_amount_Bonus" type="text" /></p>
 		</td>
 	</tr>
 	<tr>
@@ -96,11 +85,9 @@ $(document).ready(function(){
 	<div>
 	<table>
 	<tr>
-	    <td><p>Enter the birth year: <input id="txt_birthYear" type="text" /></p>
-            <p>Enter the current year: <input id="txt_currentYear" type="text" /></p>
-		</td>
-		<td><p><b>Bonus</b></p>
-            <p>Enter the birth year: <input id="txt_birthYear_Bonus" type="text" /></p>
+	    <td><p>Enter the radius of the circle: <input id="txt_radius" type="text" /></p>
+     	</td>
+		<td>
 		</td>
 	</tr>
 	<tr>

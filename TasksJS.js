@@ -30,7 +30,7 @@ function calculateAgeusingBirthYear( birthYear )
  {
    var totalAmount = (MAX_AGE - age) * amount * 365;
    //alert("You will need "+ totalAmount +" to last you until the ripe old age of "+ MAX_AGE +".");
-   return "You will need "+ Math.roud(totalAmount) +" to last you until the ripe old age of "+ MAX_AGE +".";
+   return "You will need "+ Math.round(totalAmount) +" to last you until the ripe old age of "+ MAX_AGE +".";
  }
  
  //calculateSupply(27,30);
